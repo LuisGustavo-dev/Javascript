@@ -1,0 +1,55 @@
+Javascript
+
+[array]
+{objeto}
+(função)
+
+node javascript.js - Para rodar um arquivo javascript com o node, basta usar o comando [node <path>] no terminal
+
+
+Escopo (local, global)
+	Cada função cria uma escopo, determina o acesso a uma variavel (o alcance dela).
+	Variaveis dentro de uma função não são visiveis/acessiveis fora dessa função.
+
+
+Definições de Var, Let e Const
+	Var - Se for declarado dentro de uma função, terá o escopo de função/local e se for declarado fora, terá o escopo global.
+		var global = "var global";
+		function newFunction() {
+			var local = "var local";
+		}
+	Variáveis de var podem ser declaradas de novo e atualizadas sem gerar um erro.
+		var 1 = "Variável declarada";
+		var 1 = "Variável declarada novamente";
+
+	Let - Uma váriavel declarada com Let em um bloco estará disponível apenas dentro daquele bloco.
+		let global = "Variável declarada";
+		let times = 4;
+
+		if (times > 3) {
+				let local = "Variável declarada novamente";
+				console.log(local); dirá "Variável declarada novamente"
+			}
+   		console.log(local) local não está definido
+	
+		Let pode ser atualizado, mas não declarado novamente
+			let global = "Variável declarada";
+			global = "Variável declarada novamente";
+
+	Const - Variaveis declaradas com Const mantêm valores constantes.
+			Assim como o let, as declarações de const só podem ser acessadas dentro do bloco que foram declaradas.
+			Const não pode ser atualizado e nem declarado novamente.
+				const greeting = "Variável declarada";
+    			greeting = "Variável declarada novamente";	erro: atribuição a uma variável constante. 
+
+
+Função
+	É um conjunto de codigos que só vão ser executados quando o evento occorrer.
+	O conteudo dentro de chaves é chamado de bloco.
+		function ação(param) {
+			bloco
+		}
+
+
+DOM Events
+	addEventListener é basicamente um onClick que é chamado no javascript sem a necessidade de um onClick no html
